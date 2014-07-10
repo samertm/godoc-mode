@@ -51,7 +51,7 @@
         (in-block-p (if (eq state :in-block) t nil)))
     (cond ((eq state :start)
            (search-forward-regexp non-whitespace) ;; TODO will give us errors if it can't
-           ;; find it, refactor later?
+                                                  ;; find it, refactor later?
            (backward-char) ;; we are now on the beginning of an identifier
            ;; if we see a '(', do weird shit TODO make this comment better
            (if (= (char-after) ?\( )
